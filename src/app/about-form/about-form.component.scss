@@ -1,0 +1,42 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
+.supportForm-full-width {
+    width: 70vw;
+    margin-left: 3vw;
+  }
+
+.supportForm {
+    width: 70vw;
+    margin-left:15vw;
+    justify-content: center;
+    align-items: center;
+}
+.about_text {
+    position: absolute;
+    left: 5px;
+    font-size: 20px;
+}
+
+.icon {
+    font-size: inherit;
+    vertical-align: middle;
+}
+
+.submit {
+    float:right;
+}
+
+.divider {
+ 
+    width: 10em;
+}
+
+.container_centered {
+    height: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}

@@ -1,0 +1,121 @@
+<div class="supportForm">
+
+<mat-grid-list cols="4" rowHeight="8vh">
+  <mat-grid-tile colspan="3" rowspan="1">
+    <span class="about_text">
+      <mat-icon
+        aria-hidden="false"
+        class="icon"
+        aria-label="Example receipt icon"
+        >business</mat-icon
+      >
+      Narwhal
+    </span>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="1" rowspan="4">
+    <span class="about_text">
+      <object
+        data="assets/3668865_beauty_health_heart_icon.svg"
+        width="300"
+        height="250"
+        type="image/svg+xml"
+      >
+      <img src="assets/3668865_beauty_health_heart_icon.png"
+      alt="app logo" />
+    
+    </object>
+    </span>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="3" rowspan="1">
+    <span class="about_text"
+      ><mat-icon
+        aria-hidden="false"
+        class="icon"
+        aria-label="Example receipt icon"
+        >verified</mat-icon
+      >
+      1.35.2
+    </span>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="3" rowspan="1">
+    <span class="about_text">
+      <mat-icon
+        aria-hidden="false"
+        class="icon"
+        aria-label="Example receipt icon"
+        >home</mat-icon
+      >
+      Medex 240 allée Jacques Monod 69800 Saint-Priest Cedex - France
+    </span>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="3" rowspan="1">
+    <span class="about_text"> UID : (01)020005140100789 </span>
+  </mat-grid-tile>
+</mat-grid-list>
+<span class="container_centered">
+<mat-divider class="divider"></mat-divider>
+</span>
+<form [formGroup]="supportForm" (submit)="submit()">
+  <span class="subTitle"
+    ><h2>
+      Sales contact
+      <mat-icon
+        aria-hidden="false"
+        class="icon"
+        aria-label="Example receipt icon"
+        >point_of_sale</mat-icon
+      >
+    </h2>
+  </span>
+
+  <mat-form-field class="supportForm-full-width" col="12">
+    <mat-label>Enter sales contact</mat-label>
+    <textarea
+      matInput
+      formControlName="guerbetSales"
+      type="text"
+      rows="5"
+      cdkTextareaAutosize
+      #autosize="cdkTextareaAutosize"
+      cdkAutosizeMinRows="1"
+      cdkAutosizeMaxRows="5"
+    ></textarea>
+  </mat-form-field>
+  <span class="subTitle">
+    <h2>
+      Technical support contact
+      <mat-icon
+        aria-hidden="false"
+        class="icon"
+        aria-label="Example receipt icon"
+        >support_agent</mat-icon
+      >
+    </h2>
+  </span>
+
+  <mat-form-field class="supportForm-full-width">
+    <mat-label>Enter technical supports contact</mat-label>
+    <mat-label for="technicalSupport"> </mat-label>
+
+    <textarea
+      matInput
+      formControlName="technicalSupport"
+      type="text"
+      rows="5"
+      cdkTextareaAutosize
+      #autosize="cdkTextareaAutosize"
+      cdkAutosizeMinRows="1"
+      cdkAutosizeMaxRows="5"
+    ></textarea>
+  </mat-form-field>
+  <button
+    mat-flat-button
+    class="submit"
+    type="submit"
+    color="primary"
+    [disabled]="!supportForm.valid"
+  >
+    Submit
+  </button>
+</form>
+</div>
